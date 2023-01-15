@@ -1,0 +1,25 @@
+.infoContainer{
+    width: 50%;
+    margin-top: -170px;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: bolder;
+    padding-bottom: 30px;
+}
+
+.inputContainer{
+    margin-top: 20px;
+}
+
+.input{
+    width: 13vw;
+    height: 3vh;
+    margin-top: 7px;
+}
+
+.label{
+    font-size: 18px;
+    font-weight: 700;
+}

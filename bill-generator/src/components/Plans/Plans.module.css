@@ -1,0 +1,35 @@
+.plansContainer{
+    height: 60%;
+    width: 70%;
+    margin-top: -190px;
+}
+
+.title{
+    color: #04285A;
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.subtitle{
+    color: grey;
+    margin-top: 10px;
+}
+
+.boxContainer{
+    display: flex;
+    width: 90%;
+    height: 50%;
+    /* border: 1px solid red; */
+    margin-top: 60px;
+    justify-content: space-between;
+}
+
+.btn{
+    width: 90%;
+    height: 40px;
+    background-color: #DADADA;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

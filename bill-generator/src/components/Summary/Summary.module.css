@@ -1,0 +1,25 @@
+.summaryContainer{
+    height: 60%;
+    width: 70%;
+    margin-top: -190px;
+}
+
+.title{
+    color: #04285A;
+    font-size: 28px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.info{
+    /* border: 1px solid red; */
+    color: grey;
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.datatype{
+    font-weight: bold;
+    color: rgb(63, 63, 63);
+}
