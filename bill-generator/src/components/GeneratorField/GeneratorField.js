@@ -14,6 +14,14 @@ const GeneratorField = () => {
         phone : ""
     });
 
+    const [userData, setUserData] = useState({
+        name: "",
+        email: "",
+        phone: ""
+    });
+
+    const [planType, setPlanType] = useState({planName: "Arcade", price: 9});
+
     function goBack(){
         if(stepNumber>1){
             setStepNumber(stepNumber-1);
@@ -21,6 +29,22 @@ const GeneratorField = () => {
     }
 
     function nextStep(){
+        if(!userData.name){
+            setErrorMessage({name: "** Enter name first."});
+            return;
+        }
+        if(!userData.email){
+            setErrorMessage({email: "** Enter email first."});
+            return;
+        }
+        if(!userData.phone){
+            setErrorMessage({phone: "** Enter phone no first."});
+            return;
+        }
+        if(userData.phone.length !== 10){
+            setErrorMessage({phone: "** Enter valid phone number."});
+            return;
+        }
         if(stepNumber<3){
             setStepNumber(stepNumber+1);
         }
@@ -33,9 +57,9 @@ const GeneratorField = () => {
                 <Step step={3} stepname="SUMMARY" stepNumber={stepNumber} />
             </div>
             <div className={styles.right}>
-                {stepNumber === 1 && <Info errorMessage={errorMessage} />}
-                {stepNumber === 2 && <Plans />}
-                {stepNumber === 3 && <Summary />}
+                {stepNumber === 1 && <Info userData={userData} setUserData={setUserData} errorMessage={errorMessage} />}
+                {stepNumber === 2 && <Plans planType={planType} setPlanType={setPlanType} />}
+                {stepNumber === 3 && <Summary userData={userData} planType={planType} />}
                 <div className={styles.btns}>
                     <div onClick={goBack}>
                         <Button style="light" name="Go Back" />

@@ -1,12 +1,27 @@
 import React from 'react';
 import styles from './PlanBox.module.css';
 
-const PlanBox = () => {
+const PlanBox = (props) => {
+    const backgroundcolor = props.backgroundColor;
+    const planType = props.planType;
+    const setPlanType = props.setPlanType;
+
+    function handleClick(){
+        setPlanType({planName: props.name, price: props.price});
+        console.log(planType);
+        console.log(props.name);
+    }
+
     return (
-        <div className={styles.container}>
-            <div className={styles.icon}></div>
+        <div className={planType.planName === props.name ? styles.containerSelected : styles.container} onClick={handleClick}>
+            <div className={styles.icon} style={{backgroundColor: backgroundcolor}}>
+                {props.icon}
+            </div>
             <div className={styles.plantype}>
-                Arcade
+                {props.name}
+                <div className={styles.price}>
+                    ${props.price}/month
+                </div>
             </div>
         </div>
     );

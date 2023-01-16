@@ -6,16 +6,37 @@
     position: relative;
 }
 
+.container:hover{
+    cursor: pointer;
+    background-color: aliceblue;
+}
+
 .containerSelected{
-    height: 150px;
-    width: 129px;
+    height: 140px;
+    width: 121px;
     border: 1px solid rgba(65, 34, 115, 0.7);
     border-radius: 5px;
     background-color: #DADADA;
+    position: relative;
+}
+
+.icon{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px;
 }
 
 .plantype{
     position: absolute;
     bottom: 10px;
     margin-left: 10px;
+}
+
+.price{
+    color: grey;
+    font-size: small;
 }
