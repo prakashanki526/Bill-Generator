@@ -22,4 +22,6 @@
 .datatype{
     font-weight: bold;
     color: rgb(63, 63, 63);
+    display: inline-block;
+    width: 40%;
 }

@@ -12,11 +12,11 @@ const Summary = (props) => {
                 Summary
             </div>
             <div className={styles.info}>
-                <span className={styles.datatype}>Name :</span> {userData.name}<br></br>
-                <span className={styles.datatype}>Email :</span> {userData.email}<br></br>
-                <span className={styles.datatype}>Phone :</span> {userData.phone}<br></br>
-                <span className={styles.datatype}>Plan :</span> {planType.planName}<br></br>
-                <span className={styles.datatype}>Total :</span> ${planType.price}<br></br>
+                <div className={styles.datatype}>Name :</div> {userData.name}<br></br>
+                <div className={styles.datatype}>Email :</div> {userData.email}<br></br>
+                <div className={styles.datatype}>Phone :</div> {userData.phone}<br></br>
+                <div className={styles.datatype}>Plan :</div> {planType.planName}<br></br>
+                <div className={styles.datatype}>Total :</div> ${planType.price}<br></br>
                 <hr></hr>
                 <span className={styles.datatype}>Grand Total :</span> ${planDuration ? planType.price*12 : planType.price}<br></br>
             </div>

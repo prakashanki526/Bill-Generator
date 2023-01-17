@@ -27,7 +27,7 @@ const Info = (props) => {
                 </div>
                 <div className={styles.inputContainer}>
                     <label className={styles.label}>Email</label><br></br>
-                    <input className={styles.input} type="email" placeholder={placeholder.email} name='email' onChange={handleChange}></input>
+                    <input className={styles.input} type="Email" placeholder={placeholder.email} name='email' onChange={handleChange}></input>
                     <div className={styles.errorMessage}>{errorMessage.email}</div>
                 </div>
                 <div className={styles.inputContainer}>

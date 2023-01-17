@@ -34,7 +34,7 @@ const Plans = (props) => {
 } price={15} planType={planType} setPlanType={setPlanType} />
             </div>
             <div className={styles.btn}>
-                Monthly <SwitchComponent value={planDuration} onChange={toggle} />  Yearly
+                Monthly &nbsp; <SwitchComponent value={planDuration} onChange={toggle} /> &nbsp; Yearly
             </div>
         </div>
     );
