@@ -3,9 +3,18 @@ import styles from './Plans.module.css';
 import PlanBox from '../PlanBox/PlanBox';
 import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
 
+import "../../../node_modules/@syncfusion/ej2-base/styles/material.css";
+import "../../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+
 const Plans = (props) => {
     const planType = props.planType;
     const setPlanType = props.setPlanType;
+    const planDuration = props.planDuration;
+    const setPlanDuration = props.setPlanDuration;
+
+    function toggle(){
+        setPlanDuration(!planDuration);
+    }
     
     return (
         <div className={styles.plansContainer}>
@@ -25,7 +34,7 @@ const Plans = (props) => {
 } price={15} planType={planType} setPlanType={setPlanType} />
             </div>
             <div className={styles.btn}>
-                Monthly
+                Monthly <SwitchComponent value={planDuration} onChange={toggle} />  Yearly
             </div>
         </div>
     );

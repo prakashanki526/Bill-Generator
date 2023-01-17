@@ -21,8 +21,22 @@ const GeneratorField = () => {
     });
 
     const [planType, setPlanType] = useState({planName: "Arcade", price: 9});
+    const [planDuration, setPlanDuration] = useState(0);
+
+    const [placeholder, setPlaceholder] = useState({
+        name : "Enter your name",
+        email : "Enter email",
+        phone : "Enter contact no."
+    })
 
     function goBack(){
+        if(stepNumber === 3){
+            setPlanDuration(0);
+        }
+        if(stepNumber === 2){
+            setPlaceholder(userData);
+            setErrorMessage({});
+        }
         if(stepNumber>1){
             setStepNumber(stepNumber-1);
         }
@@ -57,9 +71,9 @@ const GeneratorField = () => {
                 <Step step={3} stepname="SUMMARY" stepNumber={stepNumber} />
             </div>
             <div className={styles.right}>
-                {stepNumber === 1 && <Info userData={userData} setUserData={setUserData} errorMessage={errorMessage} />}
-                {stepNumber === 2 && <Plans planType={planType} setPlanType={setPlanType} />}
-                {stepNumber === 3 && <Summary userData={userData} planType={planType} />}
+                {stepNumber === 1 && <Info userData={userData} setUserData={setUserData} errorMessage={errorMessage} placeholder={placeholder} />}
+                {stepNumber === 2 && <Plans planType={planType} setPlanType={setPlanType} planDuration={planDuration} setPlanDuration={setPlanDuration} />}
+                {stepNumber === 3 && <Summary userData={userData} planType={planType} planDuration={planDuration} />}
                 <div className={styles.btns}>
                     <div onClick={goBack}>
                         <Button style="light" name="Go Back" />

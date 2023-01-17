@@ -4,6 +4,7 @@ import styles from './Summary.module.css';
 const Summary = (props) => {
     const userData = props.userData;
     const planType = props.planType;
+    const planDuration = props.planDuration;
 
     return (
         <div className={styles.summaryContainer}>
@@ -17,7 +18,7 @@ const Summary = (props) => {
                 <span className={styles.datatype}>Plan :</span> {planType.planName}<br></br>
                 <span className={styles.datatype}>Total :</span> ${planType.price}<br></br>
                 <hr></hr>
-                <span className={styles.datatype}>Grand Total :</span> ${planType.price}<br></br>
+                <span className={styles.datatype}>Grand Total :</span> ${planDuration ? planType.price*12 : planType.price}<br></br>
             </div>
         </div>
     );
