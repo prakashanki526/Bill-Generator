@@ -51,6 +51,10 @@ const GeneratorField = () => {
             setErrorMessage({email: "** Enter email first."});
             return;
         }
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userData.email))){
+            setErrorMessage({email: "** Invalid email address"});
+            return;
+        }
         if(!userData.phone){
             setErrorMessage({phone: "** Enter phone no first."});
             return;
